@@ -1,0 +1,36 @@
+.TeamsItems {
+    display: flex;
+    width: 80%;
+    margin: 0 auto 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.Team {
+    width: 48%;
+    text-align: center;
+}
+.TeamsBorder {
+    font-size: 48px;
+    font-weight: bold;
+}
+.Team h3 {
+    margin: 0;
+    margin-bottom: 5px;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.Team span {
+    font-weight: bold;
+    font-size: 36px;
+}
+
+@media screen and (max-width: 680px){
+    .TeamsItems {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .Team span {
+        font-size: 24px;
+    }
+}

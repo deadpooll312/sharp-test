@@ -1,0 +1,46 @@
+.TotalScore {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: center;
+}
+.TotalScore h2 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.TotalScoreContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.TotalScoreContainer p {
+    width: 50%;
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.TotalScoreContainer p b {
+    font-size: 32px;
+}
+
+@media screen and (max-width: 640px){
+    .TotalScoreContainer p {
+        width: 100%;
+        font-size: 16px;
+    }
+    .TotalScoreContainer p b {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .ScoreItems {
+        width: 95%;
+    }
+    .TotalScore {
+        width: 100%;
+    }
+}

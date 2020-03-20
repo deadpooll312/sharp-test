@@ -1,0 +1,45 @@
+.ScoreItems {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.ScoresContainer {
+    background: #000;
+    border-radius: 15px;
+    padding: 15px 25px;
+    height: 270px;
+    overflow-y: auto;
+}
+
+.ScoreItems h2 {
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.ScoreItem {
+    display: flex;
+    color: #ffffff;
+    padding: 10px 0;
+    border-bottom: 1px solid #ffffff;
+}
+.ScoreItem span {
+    margin-bottom: 7px;
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.ScoreItem span b {
+    background: #932323;
+    color: #ffffff;
+    display: inline-block;
+    padding: 3px 5px;
+    border-radius: 4px;
+    font-weight: normal;
+}
+
+@media screen and (max-width: 960px){
+    .ScoreItem {
+        flex-direction: column;
+    }
+}
