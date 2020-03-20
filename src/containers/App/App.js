@@ -13,6 +13,7 @@ class App extends Component {
         <Header/>
         <Switch>
           <Route path="/" exact component={HomeContainer}/>
+          <Route path="/score" exact component={ScorePageContainer}/>
         </Switch>
       </Fragment>
     );
