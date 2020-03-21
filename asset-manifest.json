@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/sharp-test/static/css/main.49aea157.chunk.css",
+    "main.js": "/sharp-test/static/js/main.72a00610.chunk.js",
+    "main.js.map": "/sharp-test/static/js/main.72a00610.chunk.js.map",
+    "runtime-main.js": "/sharp-test/static/js/runtime-main.93003fa5.js",
+    "runtime-main.js.map": "/sharp-test/static/js/runtime-main.93003fa5.js.map",
+    "static/js/2.48fc64db.chunk.js": "/sharp-test/static/js/2.48fc64db.chunk.js",
+    "static/js/2.48fc64db.chunk.js.map": "/sharp-test/static/js/2.48fc64db.chunk.js.map",
+    "index.html": "/sharp-test/index.html",
+    "precache-manifest.d2493c42ec3b0c3f592f14f4c0d074b5.js": "/sharp-test/precache-manifest.d2493c42ec3b0c3f592f14f4c0d074b5.js",
+    "service-worker.js": "/sharp-test/service-worker.js",
+    "static/css/main.49aea157.chunk.css.map": "/sharp-test/static/css/main.49aea157.chunk.css.map",
+    "static/js/2.48fc64db.chunk.js.LICENSE.txt": "/sharp-test/static/js/2.48fc64db.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.93003fa5.js",
+    "static/js/2.48fc64db.chunk.js",
+    "static/css/main.49aea157.chunk.css",
+    "static/js/main.72a00610.chunk.js"
+  ]
+}
