@@ -1,11 +1,15 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunkMiddleware from 'redux-thunk';
+import promise from 'redux-promise-middleware';
 
-import app from './app';
+// local files
+import user from './user/user.reducer';
+import list from './list/list.reducer';
+import users from './users/users.reducer';
+import transaction from './transaction/transaction.reducer';
 
-const rootReducer = combineReducers({
-  app
-});
+const rootReducer = combineReducers({user, list, users, transaction});
+const middleware = applyMiddleware(thunkMiddleware, promise);
 
-export default createStore(rootReducer, composeWithDevTools(applyMiddleware(thunkMiddleware)));
+export default createStore(rootReducer, composeWithDevTools(middleware));
