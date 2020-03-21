@@ -10,7 +10,7 @@ export default function App() {
   return <div className="container">
     <BrowserRouter>
       <Switch>
-        <Route exact path="/login" component={Login} />
+        <Route path="/login" component={Login} />
         <Route path="/registration" component={Registration} />
         <Route component={Сontainer} />
       </Switch>

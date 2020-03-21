@@ -10,6 +10,6 @@ export function createTransaction(data) {
     dispatch({
       type: TRANSACTION,
       payload: api.post('api/protected/transactions', data).then(res => res.data)
-    })
+    }).catch(() => undefined);
   }
 }

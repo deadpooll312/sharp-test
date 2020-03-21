@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from "react-redux";
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 // local files
 import { Input, Message } from '../components';
 import { initUser } from '../store/user/user.actions';
@@ -13,6 +13,7 @@ function Registration(props) {
   const [error, setError] = React.useState(null);
 
   useEffect(() => {
+    const abortController = new AbortController();
     const { error, data } = user;
 
     if (error && error.response) {
@@ -24,6 +25,9 @@ function Registration(props) {
       history.push('/');
     }
 
+    return function clean() {
+      abortController.abort();
+    }
   }, [user, history]);
 
   function submit(e) {
@@ -65,6 +69,7 @@ function Registration(props) {
         type="password"
         placeholder="" />
       <button type="submit" className="btn btn-primary">Submit</button>
+      <Link to="/login">Login</Link>
     </form>
   </React.Fragment>
 }

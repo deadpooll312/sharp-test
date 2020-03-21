@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Table(props) {
+export function Table(props) {
   const { data } = props;
 
   const body = data.map(item => <tr key={item.id}>

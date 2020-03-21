@@ -10,6 +10,6 @@ export function filterUsers(filter) {
     dispatch({
       type: USERS,
       payload: api.post('/api/protected/users/list', {filter}).then(res => res.data)
-    })
+    }).catch(() => undefined);
   }
 }

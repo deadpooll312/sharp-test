@@ -15,6 +15,6 @@ export default function transaction(state = inintialState, action) {
     case TRANSACTION_REJECTED:
       return {...state, ...{data: {}, loading: false, error: action.payload}};
     default:
-      return {...state, ...{error: null}};
+      return {...state, ...{error: null, data: {}}};
   }
 }

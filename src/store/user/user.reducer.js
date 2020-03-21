@@ -19,6 +19,6 @@ export default function user(state = inintialState, action) {
     case USER_CLEAR:
       return {...state, ...{loading: false, error: null, data: {}}};
     default:
-      return state;
+      return {...state, ...{error: null, data: {}}};
   }
 }

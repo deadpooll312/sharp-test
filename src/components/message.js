@@ -1,15 +1,10 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 
 export function Message(props) {
-  const {message, onClick, type} = props;
-  const tm = 3000;
-
-  useEffect(() => {
-    setTimeout(onClick, tm);
-  }, [message, onClick]);
+  const { message, onClick, type } = props;
 
   return message ? <div
     onClick={onClick}
     className={`alert alert-${type || 'danger'}`}
-    role="alert">{message}</div> : null
+    role="alert">{message} <span className="float-right">x</span></div> : null
 }

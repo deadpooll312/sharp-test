@@ -16,6 +16,7 @@ function Create(props) {
   const [searchData, setSearchData] = React.useState([]);
 
   useEffect(() => {
+    const abortController = new AbortController();
     const { data } = users;
     const { error } = transaction;
 
@@ -28,6 +29,11 @@ function Create(props) {
     } 
 
     setSearchData(data);
+
+    return function cleanup() {
+      abortController.abort();
+    }
+
   }, [users, transaction, history]);
 
   function submit(e) {

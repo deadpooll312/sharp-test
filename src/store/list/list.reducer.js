@@ -15,6 +15,6 @@ export default function list(state = inintialState, action) {
     case LIST_REJECTED:
       return {...state, ...{loading: false, error: action.payload}};
     default:
-      return state;
+      return {...state, ...{error: null, data: []}};
   }
 }

@@ -13,6 +13,7 @@ function Login(props) {
   const {user} = props;
 
   useEffect(() => {
+    const abortController = new AbortController();
     const { error, data } = user;
 
     if (error && error.response) {
@@ -22,6 +23,10 @@ function Login(props) {
     if (data && data.id_token) {
       localStorage.setItem(ID_TOKEN, data.id_token);
       history.push('/list');
+    }
+
+    return function clean() {
+      abortController.abort();
     }
 
   }, [user, history]);
@@ -58,7 +63,7 @@ function Login(props) {
         label="Password"
         type="password" />
       <button type="submit" className="btn btn-primary">{user.loading ? 'Loading ...' : 'Submit'}</button>
-      <Link to="/registration">Sign up</Link>
+      <Link to="/registration">Registration</Link>
     </form>
   </React.Fragment>
 }

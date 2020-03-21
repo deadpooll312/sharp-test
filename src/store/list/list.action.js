@@ -10,6 +10,6 @@ export function initList() {
     dispatch({
       type: LIST,
       payload: api.get('api/protected/transactions').then(res => res.data)
-    })
+    }).catch(() => undefined);
   }
 }
