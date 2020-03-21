@@ -44,7 +44,6 @@ function Registration(props) {
 
   return <React.Fragment>
     <h1 className="text-center">Registration Page</h1>
-
     <Message message={error} onClick={messageClick} />
 
     <form onSubmit={submit}>
